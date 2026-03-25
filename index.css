@@ -226,7 +226,7 @@ height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(7, 191, 191);
+    background: rgba(0,0,0,0.6);
     color: aliceblue;
     font-size: 20px;
     height: 30px;
@@ -238,7 +238,7 @@ height: 100%;
 
 .view-card2 {
       flex: 0 0 5em;
-    height: 4em;
+    height: 4.3em;
     padding: 0px;
     position: relative;
     font-size: 3rem;
@@ -258,7 +258,7 @@ width: 100%;
     background-color: #1a0014;
     color: white;
     margin-top: 40px;
-        position: absolute;
+    position: absolute;
     bottom: 0;
     width: 100%;
   
@@ -268,7 +268,7 @@ width: 100%;
 .footer-container {
     display: flex;
     justify-content: space-between;
-     height: 180px;
+     height: 181px;
     padding: 10px 60px;
     gap: 30px;
   
@@ -334,38 +334,61 @@ width: 100%;
 
 
 .acts {
-   background-color:rgb(98, 152, 43);
-    width: 100%;
-    height: 374px;
-    display: flex;
-    align-items: center;
-   justify-content: center;
-    font-size: 45px;
-   
+    background-color: #62982b;
+    padding: 50px 20px;
+    text-align: center;
 }
 
+/* Title */
+.acts-title {
+    font-size: 32px;
+    color: white;
+    margin-bottom: 30px;
+}
+
+/* Grid */
 .acts-container {
     display: grid;
-    grid-template-columns: 180px 90px;
-   
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    width: 80%;
+    margin: auto;
 }
 
-.box {
-border: 3px red solid;
-height: 44px;
-width: 30px;
+/* Card */
+.card-act {
+    position: relative;
+    height: 180px;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
 }
 
-.box img {
-    object-fit: fill;
-    height: 100%;
+/* Image */
+.card-act img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s;
 }
 
-.box1 {
-    width: 400px;
+/* Overlay text */
+.overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    font-size: 18px;
+    text-align: center;
 }
 
-.box2 {
-    width: 90px
+/* Hover effect */
+.card-act:hover img {
+    transform: scale(1.1);
+}
+
+.card-act:hover .overlay {
+    background: rgba(0,0,0,0.8);
 }
